@@ -29,3 +29,10 @@ $ sudo iptables -A OUTPUT -s 192.168.11.0/24 -d 192.168.11.0/24 -j ACCEPT
 
 $ sudo service ufw restart
 ```
+
+### 1.3 Configure root access
+
+```
+$ sudo passwd root
+$ sudo passwd -u root
+```
