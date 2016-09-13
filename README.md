@@ -36,3 +36,27 @@ $ sudo service ufw restart
 $ sudo passwd root
 $ sudo passwd -u root
 ```
+
+### 1.4 Optimize the usage of Swap
+
+Temporarily change swappiness’ value to 10 using following command, and it will be reverted in next restart.
+
+```
+$ sudo sysctl vm.swappiness=10
+```
+To permanently change this value, using:
+
+```
+$ sudo vi /etc/sysctl.conf
+```
+Search for vm.swappiness and change its value as desired. If vm.swappiness does not exist, add it to the end of the file like so:
+
+```
+vm.swappiness=10
+```
+
+Check the value of swappiness:
+
+```
+$ cat /proc/sys/vm/swappiness
+```
