@@ -173,6 +173,12 @@ $ sudo apt-get install cloudera-manager-daemons cloudera-manager-server
 $ sudo service cloudera-scm-server start
 ```
 
+### 3.1 Preparing a Cloudera Manager Server External Database
+
+```
+$ sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql cloudera akmal Goldfish
+```
+
 Start the Cloudera Manager Server:
 ```
 $ sudo service cloudera-scm-server start
