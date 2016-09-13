@@ -37,6 +37,15 @@ $ sudo passwd root
 $ sudo passwd -u root
 ```
 
+Install openssh-server and allow root login:
+
+```
+$ sudo apt install openssh-server
+$ sudo vi /etc/ssh/sshd_config
+PermitRootLogin yes
+$ sudo service ssh restart
+```
+
 ### 1.4 Optimize the usage of Swap
 
 Temporarily change swappiness’ value to 10 using following command, and it will be reverted in next restart.
