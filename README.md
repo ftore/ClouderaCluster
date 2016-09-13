@@ -190,4 +190,4 @@ $ sudo tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 ```
 on the Cloudera Manager Server host.
 
-Go to http://Server host:7180
+Go to http://ubuservmaster:7180
