@@ -132,3 +132,56 @@ Start the MySQL server:
 ```
 $ sudo service mysql start
 ```
+Install MySQL JDBC Driver
+
+```
+$ sudo apt-get install libmysql-java
+```
+
+Create users and databases in MySQL:
+
+```
+$ mysql -u root -p
+Enter password:
+
+mysql> create database cloudera DEFAULT CHARACTER SET utf8;
+mysql> grant all on cloudera.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+
+mysql> create database hive DEFAULT CHARACTER SET utf8;
+mysql> grant all on hive.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+
+mysql> create database hue DEFAULT CHARACTER SET utf8;
+mysql> grant all on hue.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+
+mysql> create database oozie DEFAULT CHARACTER SET utf8;
+mysql> grant all on oozie.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+```
+
+## 2. Establish Your Cloudera Manager Repository Strategy
+
+```
+$ wget https://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list
+$ sudo cp cloudera.list /etc/apt/sources.list.d/cloudera-manager.list
+$ sudo apt-get update
+```
+
+## 3. Install Cloudera Manager Server Software
+
+```
+$ sudo apt-get install oracle-j2sdk1.7
+$ sudo apt-get install cloudera-manager-daemons cloudera-manager-server
+$ sudo service cloudera-scm-server start
+```
+
+Start the Cloudera Manager Server:
+```
+$ sudo service cloudera-scm-server start
+```
+
+To observe the startup process, run:
+```
+$ sudo tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log 
+```
+on the Cloudera Manager Server host.
+
+Go to http://Server host:7180
