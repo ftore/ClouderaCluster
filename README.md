@@ -154,16 +154,16 @@ $ mysql -u root -p
 Enter password:
 
 mysql> create database cloudera DEFAULT CHARACTER SET utf8;
-mysql> grant all on cloudera.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+mysql> grant all on cloudera.* TO 'akmal'@'%' IDENTIFIED BY 'password';
 
 mysql> create database hive DEFAULT CHARACTER SET utf8;
-mysql> grant all on hive.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+mysql> grant all on hive.* TO 'akmal'@'%' IDENTIFIED BY 'password';
 
 mysql> create database hue DEFAULT CHARACTER SET utf8;
-mysql> grant all on hue.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+mysql> grant all on hue.* TO 'akmal'@'%' IDENTIFIED BY 'password';
 
 mysql> create database oozie DEFAULT CHARACTER SET utf8;
-mysql> grant all on oozie.* TO 'akmal'@'%' IDENTIFIED BY 'Goldfish';
+mysql> grant all on oozie.* TO 'akmal'@'%' IDENTIFIED BY 'password';
 ```
 
 ## 2. Establish Your Cloudera Manager Repository Strategy
